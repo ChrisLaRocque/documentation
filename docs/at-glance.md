@@ -58,7 +58,7 @@ Take a look at this example:
 ```typescript
 import { Elysia } from 'elysia'
 
-new Elysia().get('/id/:id', ({ params: { id } }) => id).listen(8080)
+new Elysia().get('/id/:id', ({ params: { id } }) => id).listen(3000)
 ```
 
 The above code allows you to create a path parameter with the name of id, the value passed in the URL after `/id/` will be reflected as `params.id`.
@@ -82,7 +82,7 @@ new Elysia()
             id: t.Numeric()
         })
     })
-    .listen(8080)
+    .listen(3000)
 ```
 
 This code ensures that our path parameter **id**, will always be a numeric string and then transform it to a number automatically in both runtime, and compile-time (type-level).
@@ -106,7 +106,7 @@ new Elysia()
             id: t.Numeric()
         })
     })
-    .listen(8080)
+    .listen(3000)
 ```
 
 With the [Swagger plugin](/plugins/swagger.html#swagger-plugin), you can seamlessly generate a Swagger documentation page without additional code or specific config and share with your team effortlessly.
@@ -128,7 +128,7 @@ new Elysia()
             id: t.Numeric()
         })
     })
-    .listen(8080)
+    .listen(3000)
 
 export type App = typeof app
 ```
